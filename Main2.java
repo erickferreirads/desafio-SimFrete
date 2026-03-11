@@ -57,11 +57,11 @@ public class Main2 {
 
         for (int i = 0; i < cidades.size(); i++) {
             long tam = fim.get(i) - inicio.get(i);
-            if (cep1 >= inicio.get(i) && cep1 <= fim.get(i) && cep1 < menorT1) {
+            if (cep1 >= inicio.get(i) && cep1 <= fim.get(i) && tam < menorT1) {
                 menorT1 = tam;
                 origem = cidades.get(i);
             }
-            if (cep2 >= inicio.get(i) && cep2 <= fim.get(i) && cep2 < menorT2) {
+            if (cep2 >= inicio.get(i) && cep2 <= fim.get(i) && tam < menorT2) {
                 menorT2 = tam;
                 destino = cidades.get(i);
             }
